@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
     <style>
-        /* Ümumi Səhifə Tənzimləmələri */
         * {
             margin: 0;
             padding: 0;
@@ -27,7 +26,6 @@
             color: #1a252f;
         }
 
-        /* Başlıq (Header) */
         header {
             background-color: #1a252f;
             color: #d4af37;
@@ -42,29 +40,31 @@
         }
 
         .logo {
-            font-size: 1.2rem;
-            font-weight: bold;
+            flex: 1;
             display: flex;
-            align-items: center;
-            gap: 8px;
+            justify-content: flex-start;
         }
 
         .logo img {
-            height: 30px; /* Logo şəkli buraya gələcək */
+            height: 35px;
         }
 
         .page-title {
+            flex: 2;
+            text-align: center;
             font-size: 1.1rem;
             letter-spacing: 1px;
             color: #fff;
         }
 
         .burger-menu {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
             font-size: 1.5rem;
             cursor: pointer;
         }
 
-        /* Qəhrəman Bölməsi (Hero/About) */
         .hero {
             display: flex;
             flex-direction: column;
@@ -87,6 +87,14 @@
         .hero h1 {
             font-size: 2.2rem;
             margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            font-size: 1.5rem;
+            display: block;
+            color: #666;
+            font-weight: 400;
         }
 
         .hero h3 {
@@ -102,7 +110,6 @@
             font-size: 1.05rem;
         }
 
-        /* Xidmətlər (Səhifə dolu görünsün deyə əlavə etdim) */
         .services {
             padding: 50px 20px;
             text-align: center;
@@ -135,7 +142,6 @@
             margin-bottom: 15px;
         }
 
-        /* Niyə Biz? Bölməsi */
         .why-us {
             background-color: #1a252f;
             color: #fff;
@@ -169,7 +175,6 @@
             margin-bottom: 10px;
         }
 
-        /* Footer (Qara bölmə) */
         footer {
             background-color: #000000;
             color: #ffffff;
@@ -208,9 +213,8 @@
 
     <header>
         <div class="logo">
-    <img src="logo.png" alt="Büro Loqosu">
-</div>
-
+            <img src="logo.png" alt="Büro Loqosu">
+        </div>
         <div class="page-title">Ana Səhifə</div>
         <div class="burger-menu">
             <i class="fas fa-bars"></i>
@@ -218,8 +222,8 @@
     </header>
 
     <section class="hero">
-        <img src="vekil.png" alt="Vəkil Elşad Məmmədov">
-        <h1>Vəkil Elşad Məmmədov</h1>
+        <img src="image.jpg" alt="Vəkil Elşad Məmmədov">
+        <h1><span>Vəkil</span> Elşad Məmmədov</h1>
         <h3>Peşəkar Hüquq Xidməti</h3>
         <p>Hüququn dili ilə ədalət. Mürəkkəb hüquqi məsələlərinizdə etibarlı və təcrübəli tərəfdaşınız olaraq, hüquqlarınızın qorunması üçün peşəkar xidmət göstəririk.</p>
     </section>
@@ -270,7 +274,7 @@
         </div>
         
         <div class="socials">
-            <a href="https://instagram.com/vekil.elsadmammadov" target="_blank">
+            <a href="https://www.instagram.com/vekil.elshadmammadov?igsh=Yjd2MnU2eWV3YTBt" target="_blank">
                 <i class="fab fa-instagram"></i>
             </a>
             <a href="https://wa.me/994502160504" target="_blank">
