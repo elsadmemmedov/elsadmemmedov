@@ -3,109 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peşəkar Hüquq Xidməti</title>
+    <title>Vəkil Elşad Məmmədov - Ana Səhifə</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* Ümumi Səhifə Tənzimləmələri */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
-            color: #212529;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: #1a252f;
+        }
+
+        /* Başlıq (Header) */
+        header {
+            background-color: #1a252f;
+            color: #d4af37;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo img {
+            height: 30px; /* Logo şəkli buraya gələcək */
+        }
+
+        .page-title {
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        .burger-menu {
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Qəhrəman Bölməsi (Hero/About) */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .hero img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #d4af37;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .hero h3 {
+            color: #666;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        /* Xidmətlər (Səhifə dolu görünsün deyə əlavə etdim) */
+        .services {
+            padding: 50px 20px;
             text-align: center;
         }
-        .container {
-            max-width: 500px;
+
+        .services h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
             margin: 0 auto;
-            background-color: #ffffff;
-            min-height: 100vh;
-            padding: 30px 20px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.05);
-            box-sizing: border-box;
         }
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #343a40;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+        .service-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-bottom: 3px solid #d4af37;
         }
-        h1 {
-            color: #212529;
-            font-size: 26px;
-            margin: 10px 0;
+
+        .service-card i {
+            font-size: 2rem;
+            color: #1a252f;
+            margin-bottom: 15px;
         }
-        h2 {
-            color: #495057;
-            font-size: 18px;
-            font-weight: 500;
+
+        /* Niyə Biz? Bölməsi */
+        .why-us {
+            background-color: #1a252f;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .why-us h2 {
+            color: #d4af37;
+            font-size: 2rem;
             margin-bottom: 30px;
         }
-        .info-box {
-            background-color: #f1f3f5;
+
+        .reasons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .reason {
+            background: rgba(255, 255, 255, 0.05);
             padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 30px;
+            border-left: 4px solid #d4af37;
             text-align: left;
         }
-        .info-box p {
-            font-size: 16px;
-            margin: 12px 0;
-            color: #343a40;
+
+        .reason h3 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        /* Footer (Qara bölmə) */
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 30px 20px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
         }
-        .info-box span {
-            font-size: 22px;
-            margin-right: 15px;
+
+        .copyright {
+            font-size: 0.9rem;
+            color: #aaa;
+            max-width: 60%;
         }
-        .contact-btn {
+
+        .socials {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #25D366;
-            color: white;
-            padding: 16px 20px;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .socials a {
+            color: #fff;
+            font-size: 1.8rem;
             text-decoration: none;
-            font-size: 18px;
-            border-radius: 30px;
-            font-weight: bold;
-            box-shadow: 0 4px 6px rgba(37, 211, 102, 0.3);
-            transition: all 0.3s ease;
+            transition: color 0.3s ease;
+            text-align: center;
         }
-        .contact-btn:active {
-            transform: scale(0.98);
-        }
-        .footer {
-            margin-top: 40px;
-            font-size: 13px;
-            color: #adb5bd;
+
+        .socials a:hover {
+            color: #d4af37;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <img src="image.jpg" alt="Vəkil" class="profile-img">
+    <header>
+        <div class="logo">
+            <i class="fas fa-balance-scale"></i> Büro
+        </div>
+        <div class="page-title">Ana Səhifə</div>
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
 
-    <h1>Hüququn dili ilə ədalət</h1>
-    <h2>Peşəkar hüquq xidməti</h2>
+    <section class="hero">
+        <img src="vekil.png" alt="Vəkil Elşad Məmmədov">
+        <h1>Vəkil Elşad Məmmədov</h1>
+        <h3>Peşəkar Hüquq Xidməti</h3>
+        <p>Hüququn dili ilə ədalət. Mürəkkəb hüquqi məsələlərinizdə etibarlı və təcrübəli tərəfdaşınız olaraq, hüquqlarınızın qorunması üçün peşəkar xidmət göstəririk.</p>
+    </section>
 
-    <div class="info-box">
-        <p><span>⚖️</span> Tam məxfi və peşəkar yanaşma</p>
-        <p><span>💼</span> Məhkəmədə hüquqların müdafiəsi</p>
-        <p><span>📄</span> Hüquqi sənədlərin hazırlanması</p>
-    </div>
+    <section class="services">
+        <h2>Xidmət Sahələri</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <i class="fas fa-briefcase"></i>
+                <h3>Korporativ Hüquq</h3>
+                <p>Şirkətlərin hüquqi müşayiəti və müqavilələrin hazırlanması.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-users"></i>
+                <h3>Ailə Hüququ</h3>
+                <p>Boşanma, aliment və əmlak bölgüsü məsələlərinin həlli.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-gavel"></i>
+                <h3>Cinayət Hüququ</h3>
+                <p>İstintaq və məhkəmə mərhələsində peşəkar müdafiə.</p>
+            </div>
+        </div>
+    </section>
 
-    <a href="https://wa.me/994502160504" class="contact-btn">
-        📞 WhatsApp ilə Əlaqə: 050 216 05 04
-    </a>
+    <section class="why-us">
+        <h2>Niyə Məhz Biz?</h2>
+        <div class="reasons">
+            <div class="reason">
+                <h3>Çoxillik Təcrübə</h3>
+                <p>Uzun illər boyu qazanılmış təcrübə sayəsində ən çətin işlərdə belə yüksək nəticələr əldə edirik.</p>
+            </div>
+            <div class="reason">
+                <h3>Məxfilik və Güvən</h3>
+                <p>Müştərilərimizin məlumatlarının tam məxfiliyinə zəmanət verir və qarşılıqlı inam əsasında işləyirik.</p>
+            </div>
+            <div class="reason">
+                <h3>Fərdi Yanaşma</h3>
+                <p>Hər bir hüquqi problemə standart deyil, tam fərdi və detallı şəkildə yanaşaraq ən uyğun həll yolunu tapırıq.</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="footer">
-        © 2026 Peşəkar Hüquq Xidməti.
-    </div>
-</div>
+    <footer>
+        <div class="copyright">
+            <p>Bütün hüquqlar qorunur © 2026</p>
+            <p>Vəkil Elşad Məmmədov</p>
+        </div>
+        
+        <div class="socials">
+            <a href="https://instagram.com/vekil.elsadmammadov" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/994502160504" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </footer>
 
 </body>
 </html>
